@@ -1,0 +1,17 @@
+######################################
+# Syntax Coloring Map For RFID       #
+######################################
+
+######################################
+# Datatypes (KEYWORD1)               #
+######################################
+
+RFID	KEYWORD1
+
+######################################
+# Methods and Functions (KEYWORD2)   #
+######################################
+
+available	KEYWORD2
+getTag	KEYWORD2
+hex2dec	KEYWORD2
