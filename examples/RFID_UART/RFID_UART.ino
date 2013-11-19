@@ -3,7 +3,7 @@
 
 // Connect your RFID reader's output line to the RX Pin
 // Read here: http://arduino.cc/en/Reference/SoftwareSerial
-// for the available pin on your board
+// for the available pins on your board
 #define RFID_RX_PIN 4
 
 // Creates an RFID instance in UART Mode
