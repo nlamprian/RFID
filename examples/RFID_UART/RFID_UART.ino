@@ -20,25 +20,27 @@ RFIDTag tag;
 
 void setup()
 {
-  Serial.begin(9600);
+    Serial.begin(9600);
+    // Wait for serial port to connect. Needed for Leonardo only
+    while (!Serial) ;
 }
 
 void loop()
 {  
     if(rfid.available())
     {
-      tag = rfid.getTag();
-      Serial.print("FC      : ");
-      Serial.println(tag.mfr, HEX);
-      Serial.print("CC      : ");
-      Serial.println(tag.id, HEX);
-      Serial.print("CHECKSUM: ");
-      Serial.println(tag.chk, HEX);
-      Serial.print("RAW DATA: ");
-      Serial.println(tag.raw);
-      Serial.print("The ID is ");
-      if (tag.valid) Serial.println("valid");
-      else Serial.println("invalid");
+        tag = rfid.getTag();
+        Serial.print("FC      : ");
+        Serial.println(tag.mfr, HEX);
+        Serial.print("CC      : ");
+        Serial.println(tag.id, HEX);
+        Serial.print("CHECKSUM: ");
+        Serial.println(tag.chk, HEX);
+        Serial.print("RAW DATA: ");
+        Serial.println(tag.raw);
+        Serial.print("The ID is ");
+        if (tag.valid) Serial.println("valid");
+        else Serial.println("invalid");
     }
 }
 

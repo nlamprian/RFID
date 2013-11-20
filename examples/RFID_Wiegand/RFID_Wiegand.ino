@@ -19,7 +19,9 @@ RFIDTag tag;
 
 void setup() 
 {
-  Serial.begin(9600);
+    Serial.begin(9600);
+    // Wait for serial port to connect. Needed for Leonardo only
+    while (!Serial) ;
 }
 
 void loop()
