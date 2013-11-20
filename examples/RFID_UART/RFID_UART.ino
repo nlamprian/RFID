@@ -7,6 +7,8 @@
 #define RFID_RX_PIN 4
 
 // Creates an RFID instance in UART Mode
+// Read here: http://arduino.cc/en/Reference/SoftwareSerial
+// for the available pins on your board
 RFID rfid(RFID_UART, RFID_RX_PIN);
 
 // Declares a struct to hold the data of the RFID card
