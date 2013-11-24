@@ -1,7 +1,9 @@
 RFID
 ====
 
-A library for interfacing RFID readers with either a UART or a Wiegand protocol.
+An Arduino library for interfacing RFID readers with either a UART or a Wiegand protocol of communication.
+
+![rfid](http://i859.photobucket.com/albums/ab154/lampnick67/rfid_zpse60f3cec.png)
 
 
 Interface
