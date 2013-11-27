@@ -7,13 +7,11 @@
 #define RFID_RX_PIN 4
 
 // Creates an RFID instance in UART Mode
-// Read here: http://arduino.cc/en/Reference/SoftwareSerial
-// for the available pins on your board
 RFID rfid(RFID_UART, RFID_RX_PIN);
 
-// Declares a struct to hold the data of the RFID card
+// Declares a struct to hold the data of the RFID tag
 // Available fields:
-//  * mfr (2 Bytes) - manufacture's code
+//  * mfr (2 Bytes) - manufacturer's code
 //  * id (3 Bytes) - card code
 //  * chk (1 Byte) - checksum
 //  * valid - validity
@@ -22,17 +20,17 @@ RFIDTag tag;
 
 void setup()
 {
-    Serial.begin(9600);
-    // Wait for serial port to connect. Needed for Leonardo only
-    while (!Serial) ;
+    Serial.begin(9600);  // Initializes serial port
+    // Waits for serial port to connect. Needed for Leonardo only
+    while ( !Serial ) ;
 }
 
 void loop()
 {  
-    if(rfid.available())
+    if( rfid.available() )  // Checks if there is available an RFID tag
     {
-        tag = rfid.getTag();
-        Serial.print("FC      : ");
+        tag = rfid.getTag();  // Retrieves the information of the tag
+        Serial.print("FC      : ");  // and prints that info on the serial port
         Serial.println(tag.mfr, HEX);
         Serial.print("CC      : ");
         Serial.println(tag.id, HEX);
