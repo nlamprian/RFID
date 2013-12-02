@@ -124,6 +124,8 @@ boolean RFID::prepareRFIDTagUART()
 
     byte hex;
 
+    _rfidIO->listen();
+
     if ( _rfidIO->available() )
     {
         // Upon STX character reception, it initializes parameters
