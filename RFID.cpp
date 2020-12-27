@@ -1,6 +1,6 @@
 /**
  * Name: RFID
- * Author: Nick Lamprianidis (lampnick67@yahoo.com)
+ * Author: Nick Lamprianidis <nlamprian@gmail.com>
  * Version: 1.0
  * Description: A library for interfacing RFID readers
                 with either a UART or a Wiegand protocol
